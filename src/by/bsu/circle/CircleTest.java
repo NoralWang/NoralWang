@@ -1,7 +1,7 @@
 package by.bsu.circle;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class CircleTest {
     @Test
