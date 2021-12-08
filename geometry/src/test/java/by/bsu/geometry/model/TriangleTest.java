@@ -14,8 +14,8 @@ public class TriangleTest {
 
     public void testPerimeter() {
         Triangle triangle=new Triangle(0,0,05,5,5,0);
-        double area=triangle.calculatePerimeter();
-        Assert.assertEquals(12.5,area,0.01);
+        double perimeter=triangle.calculatePerimeter();
+        Assert.assertEquals(12.0,perimeter,0.01);
     }
 
 }
