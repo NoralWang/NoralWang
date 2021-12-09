@@ -13,6 +13,7 @@ public class RegtangleTest {
         double area=regtangle.calculateArea();
         Assert.assertEquals(25,area,0.01);
     }
+
     @Test
     public void testAreaNegative() {
 
@@ -20,6 +21,7 @@ public class RegtangleTest {
         double area=regtangle.calculateArea();
         Assert.assertNotEquals(-25,area,0.01);
     }
+
     @Test
     public void testPerimeterPostive() {
 
@@ -27,6 +29,7 @@ public class RegtangleTest {
         double Perimter=regtangle.calculatePerimeter();
         Assert.assertEquals(20,Perimter,0.01);
     }
+
     @Test
     public void testPerimeterNegative() {
 
