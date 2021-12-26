@@ -1,30 +1,30 @@
 package by.bsu.sweet;
 
-import by.bsu.sweet.logic.BuyCalculator;
+import by.bsu.sweet.logic.PresentCalculator;
 import by.bsu.sweet.model.ChocalateSweet;
-import by.bsu.sweet.model.Division;
+import by.bsu.sweet.model.Present;
 import by.bsu.sweet.model.DonutSweet;
 import by.bsu.sweet.view.BuyPrinter;
 
 public class Main {
     public static void main(String[] args) {
-        Division division=new Division();
+        Present present =new Present();
 
         ChocalateSweet chocalateSweet=new ChocalateSweet("Extra Unt",1.0,3.0,"Black");
         DonutSweet donutSweet=new DonutSweet("Strawberry",3,9,"Pink");
 
-        division.add(chocalateSweet);
-        division.add(donutSweet);
+        present.add(chocalateSweet);
+        present.add(donutSweet);
 
         BuyPrinter printer=new BuyPrinter();
-        printer.print(division);
+        printer.print(present);
 
-        BuyCalculator calculator=new BuyCalculator();
-        double totalweight=calculator.calculateTotalWeight(division);
+        PresentCalculator calculator=new PresentCalculator();
+        double totalweight=calculator.calculateTotalWeight(present);
         System.out.println("Total weight="+totalweight);
 
-        BuyCalculator pricecalculator=new BuyCalculator();
-        double totalPrice=calculator.calculateTotalPrice(division);
+        PresentCalculator pricecalculator=new PresentCalculator();
+        double totalPrice=calculator.calculateTotalPrice(present);
         System.out.println("Total Price="+totalPrice);
 
     }

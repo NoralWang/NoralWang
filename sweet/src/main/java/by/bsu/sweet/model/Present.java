@@ -3,10 +3,10 @@ package by.bsu.sweet.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Division {
+public class Present {
     private List<AbstractSweet> sweets;
 
-    public Division(){
+    public Present(){
         sweets=new ArrayList<AbstractSweet>();
     }
 

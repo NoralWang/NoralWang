@@ -1,13 +1,13 @@
 package by.bsu.sweet.logic;
 
 import by.bsu.sweet.model.AbstractSweet;
-import by.bsu.sweet.model.Division;
+import by.bsu.sweet.model.Present;
 
 import java.util.List;
 
-public class BuyCalculator {
-    public double calculateTotalWeight(Division division){
-        List<AbstractSweet> sweets=division.getSweets();
+public class PresentCalculator {
+    public double calculateTotalWeight(Present present){
+        List<AbstractSweet> sweets= present.getSweets();
         double totalWeight=0;
         for (AbstractSweet sweet:sweets) {
             totalWeight = totalWeight + sweet.getWeight();
@@ -15,8 +15,8 @@ public class BuyCalculator {
         return totalWeight;
     }
 
-    public double calculateTotalPrice(Division division){
-        List<AbstractSweet> sweets=division.getSweets();
+    public double calculateTotalPrice(Present present){
+        List<AbstractSweet> sweets= present.getSweets();
         double totalPrice=0;
         for (AbstractSweet sweet:sweets) {
             totalPrice=totalPrice+sweet.getPrice()*sweet.getWeight();
