@@ -19,7 +19,7 @@ public class AddBookCommand implements Command {
         Book book=new Book(null,name);
         dao.save(book);
 
-        return"controller?command=booklist";
+        return"controller?command=login";
 
     }
 }

@@ -14,7 +14,12 @@ public class CommandFactory {
             case "logout":
                 return new logincommand();
             case "Return":
-                return new logoutcommand();
+                return new maincommand();
+            case "addUser":
+                return new addUsercommand();
+            case "addUserPage":
+                return new AdduserPage();
+
             default:
                 throw new UnsupportedOperationException();
         }
