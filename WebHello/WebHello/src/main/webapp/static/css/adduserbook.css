@@ -1,0 +1,95 @@
+body {
+	background-color: white;
+	position: relative;
+}
+.movebd{
+	background-color: white;
+	position: relative;
+	border-style:solid;
+	margin-left:20%;
+	border-width:5px;
+	border-color: #4CAF50;
+	padding:1px 16px;
+}
+.movebd h2
+{
+	margin:0 0 30px;
+	padding:0;
+	color:rgb(139, 178, 170);
+	text-align:center;
+}
+.movebd .box
+{
+	position: relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width:400px;
+	padding: 40px 40px 0px 40px;
+	background: rgb(139, 178, 170);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;/*登录窗口边角圆滑*/
+}
+.movebd .box h2
+{
+	margin:0 0 30px;
+	padding:0;
+	color:#fff;
+	text-align:center;
+}
+.movebd .box .inputBox
+{
+	position:relative;
+}
+.movebd .box .inputBox input
+{
+	width: 100%;
+	padding: 10px 0;
+	font-side:16px;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-bottom:30px;/*输入框设置*/
+	border:none;
+	border-bottom:1px solid #fff;
+	outline:none;
+	background:transparent;
+}
+.movebd .box .inputBox label
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+.movebd .box .inputBox input:focus ~ label,
+.movebd .box .inputBox input:valid ~ label
+{
+	top: -18px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+.movebd .box  input[type="submit"]
+{
+	position: relative;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	bottom: 10px;
+}
+.movebd .login-error{
+	text-align:center;
+	margin:500px;
+	color: #f60227;
+}
+
+

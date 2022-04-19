@@ -19,6 +19,15 @@ public class CommandFactory {
                 return new addUsercommand();
             case "addUserPage":
                 return new AdduserPage();
+            case "Rtbook":
+                return new ReturnCommand();
+            case "history":
+                return new BorrowHisCommand();
+            case"userManagement":
+                return new UserMCommand();
+            case"bookinfo":
+                return new Bookinfopage();
+
 
             default:
                 throw new UnsupportedOperationException();

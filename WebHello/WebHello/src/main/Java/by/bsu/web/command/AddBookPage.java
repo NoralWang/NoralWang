@@ -12,6 +12,6 @@ public class AddBookPage implements Command {
     public String execute(HttpServletRequest req, HttpServletResponse resp)
             throws SQLException, ClassNotFoundException {
 
-        return"WEB-INF/View/add-book.jsp";
+        return"WEB-INF/View/addbook.jsp";
     }
 }

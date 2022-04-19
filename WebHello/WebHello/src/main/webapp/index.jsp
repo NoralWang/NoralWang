@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <title>login UI</title>
-    <link rel="stylesheet" href="static/css/style1.css">
+    <link rel="stylesheet" href="static/css/index.css">
 </head>
     <br>
         <div class="box">
@@ -20,8 +20,13 @@
                     <input type="password" name="password" required="">
                     <label>Password</label>
                 </div>
+                <div align="center">
                 <input type="submit" name="" value="submit">
+                </div>
             </form>
+            <div class="create">
+                <a href="controller?command=addUserPage">Create new User</a>
+            </div>
         </div>
 
             </br>

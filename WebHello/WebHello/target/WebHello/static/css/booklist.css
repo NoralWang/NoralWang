@@ -1,12 +1,40 @@
-
 body {
-    margin:0;
-    padding: 0;
-    font-family: sans-serif;
-    background: url("../image/indexback.jpg");
-    background-size: cover;
+    background-color: white;
+    position: relative;
 }
-h2
+.movebd{
+    background-color: white;
+    position: relative;
+    border-style:solid;
+    margin-left:20%;
+    border-width:5px;
+    border-color: #4CAF50;
+    padding:1px 16px;
+}
+.movebd table
+{
+    width:100%;
+    height: 70%;
+    border:3px solid green;
+    color: black;
+    text-align: center;
+    position: relative;
+}
+.movebd .pagination {
+    text-align: center;
+}
+
+.movebd .table, td, th
+{
+    border:3px solid green;
+}
+.movebd th
+{
+    background-color:green;
+    color:white;
+}
+
+.movebd h2
 {
     margin:0 0 30px;
     padding:0;
@@ -14,22 +42,104 @@ h2
     text-align:center;
 }
 
-.box h3{
+.movebd .box h3{
     padding:0;
     color:#fff;
 }
-input[type="submit"]
+.movebd input[type="submit"]
 {
-    background: transparent;
     border: none;
     outline: none;
     color: #fff;
-    background: #f5d368;
+    background: #8bb2aa;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
 }
-.box{
+
+.movebd .queryst {
+    background-color: white;
+    position: relative;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #4CAF50;
+    padding: 1px 16px;
+    height: 20%;
+}
+.movebd .queryst .inputBox
+{
+    position:relative;
+}
+.movebd .queryst .inputBox input
+{
+    width: 100%;
+    padding: 10px 0;
+    font-side:16px;
+    color: #8bb2aa;
+    letter-spacing: 1px;
+    margin-bottom:30px;/*输入框设置*/
+    border:none;
+    border-bottom:1px solid #8bb2aa;
+    outline:none;
+    background:transparent;
+}
+.movebd .queryst .inputBox label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #80aaea;
+    pointer-events: none;
+    transition: .5s;
+}
+.movebd .queryst .inputBox input:focus ~ label,
+.movebd .queryst .inputBox input:valid ~ label
+{
+    top: -18px;
+    left: 0;
+    color: #80aaea;
+    font-size: 12px;
+}
+.movebd .queryst  input[type="submit"]
+{
+    position: relative;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #8bb2aa;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.movebd .box{
     position: relative;
     width: 25%;
     height: 30%;
@@ -37,16 +147,16 @@ input[type="submit"]
     margin-right: 8%;
 }
 
-.wrap
+.movebd .wrap
 {
     width:70%;
     margin: 0 auto;
 }
 /**********about-style**********/
-.grid{
+.movebd .grid{
     position: relative;
 }
-.social {
+.movebd .social {
     position: absolute;
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
@@ -55,16 +165,16 @@ input[type="submit"]
     left: 21%;
     top: 22%;
 }
-.social ul li{
+.movebd .social ul li{
     float: left;
 }
-.social ul{
+.movebd .social ul{
     background: rgba(27,188,155, 1);
     padding: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 2px;
 }
 
-.about
+.movebd .about
 {
     width:70%;
     height: 20%;
@@ -74,22 +184,22 @@ input[type="submit"]
     border-style: solid;
     border-color: bisque;
 }
-.about h2{
+.movebd .about h2{
     color:#fff;
     font-size:2em;
     padding-bottom: 0.5em;
 }
-.about p{
+.movebd .about p{
     color:#fff;
     font-size:1em;
     padding-bottom: 4em;
 }
-.about-grids
+.movebd .about-grids
 {
     width:100%;
     margin: 0 auto;
 }
-.grid1
+.movebd .grid1
 {
     width: 25%;
     height: 100%;
@@ -98,7 +208,7 @@ input[type="submit"]
     background-size: cover;
     margin-right: 8%;
 }
-.grid2
+.movebd .grid2
 {
     width: 25%;
     height: 100%;
@@ -107,13 +217,13 @@ input[type="submit"]
     background-size: cover;
     margin-right: 8%;
 }
-.dc_zoom_css span.roll_css6:hover {
+.movebd .dc_zoom_css span.roll_css6:hover {
     opacity: 0.9;
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
     -webkit-transition: -webkit-transform 1s;
 }
-.dc_zoom_css span.roll_css6 {
+.movebd .dc_zoom_css span.roll_css6 {
 
     -o-transition-duration: 1s;
     -moz-transition-duration: 1s;
@@ -124,10 +234,10 @@ input[type="submit"]
     width: 100%;
 }
 
-.dc_zoom_css span.roll_css6 img:hover {
+.movebd .dc_zoom_css span.roll_css6 img:hover {
     opacity:1;
 }
 
-.post-person{
+.movebd .post-person{
     width:100%;
 }

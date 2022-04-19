@@ -1,64 +1,26 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:include page="fragment/header.jsp"></jsp:include>
 <html>
-    <head>
+<div style="margin-left:20%;border-style:solid;border-width:5px;
+    border-color: #4CAF50;padding:1px 16px;height:1000px;">
+<head>
     <meta charset="utf-8">
+    <title>Library</title>
+</head>
 
-    <title>Main</title>
-       <link rel="stylesheet" href="static/css/style.css">
-    </head>
-    <body>
-    <h2>Main Page</h2>
-
-     <!-----start-about-------->
-     <div class="about" id="about">
-         <div class="wrap">
-             <div class="about-grids">
-                 <div class="grid1">
-                     <div class="dc_zoom_css">
-                         <span class="roll_css1">
-
-                         </span>
-
-                     <form action="controller?command=booklist" method="post">
-                         <input type="submit" name="booklist" value="booklist">
-                     </form></div></div>
-
-                 <div class="grid2">
-
-                     <div class="dc_zoom_css">
-                         <span class="roll_css1">
-
-                         </span>
-
-                             <form action="controller?command=addbook" method="post">
-                                 <input type="submit" name="addbook" value="addbook">
-                             </form></div></div>
-
-
-                 <div class="grid3">
-                     <div class="dc_zoom_css">
-                         <span class="roll_css1">
-
-                         </span>
-                 <form action="controller?command=logout" method="post">
-                  <input type="submit" name="logout" value="logout">
-                 </form></div></div>
-                 <div class="clear"> </div>
-
-                 <div class="grid3">
-                     <div class="dc_zoom_css">
-                         <span class="roll_css1">
-
-                         </span>
-                         <form action="controller?command=addUserPage" method="post">
-                             <input type="submit" name="addUser" value="addUser">
-                         </form></div></div>
-                 <div class="clear"> </div>
-             </div>
-         </div>
-     </div>
-     <!---------end-about------------->
+    <h2>Welcome to Library</h2>
+    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+    <p>Some text..</p>
+</div>
 
 </body>
 </html>
