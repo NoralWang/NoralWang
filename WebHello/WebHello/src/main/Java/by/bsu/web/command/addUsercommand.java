@@ -7,6 +7,7 @@ import by.bsu.web.entity.addUser;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.sql.SQLException;
 
 public class addUsercommand implements Command{
@@ -19,11 +20,11 @@ public class addUsercommand implements Command{
         String surname =req.getParameter("surname");
         String login = req.getParameter("login");
         String password=req.getParameter("password");
-        addUser users = new addUser(name,surname,login,password,null);
+        addUser users = new addUser(name,surname,login,password,0);
         adduser.save(users);
 
         if (users!=null){
-            //req.getSession().setAttribute("login",login);
+            JOptionPane.showMessageDialog(null, "Add User Success!");
             return"index.jsp";
         }
         else{

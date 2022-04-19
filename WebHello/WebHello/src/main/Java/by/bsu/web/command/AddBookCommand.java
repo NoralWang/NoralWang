@@ -6,6 +6,7 @@ import by.bsu.web.entity.Book;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -14,12 +15,22 @@ public class AddBookCommand implements Command {
     public String execute(HttpServletRequest req, HttpServletResponse resp)
             throws SQLException, ClassNotFoundException {
 
-        BookDao dao=new BookDao();
-        String name=req.getParameter("name");
-        Book book=new Book(null,name);
+        BookDao dao = new BookDao();
+        String name = req.getParameter("name");
+        String publish_year = req.getParameter("publish_Year");
+        String author = req.getParameter("author");
+        String locationID = req.getParameter("location_ID");
+        String GENRE_ID = req.getParameter("genre_id");
+        String description = req.getParameter("description");
+        Book book = new Book(name, publish_year, author, locationID, GENRE_ID, description);
         dao.save(book);
 
-        return"controller?command=login";
-
+        if (book != null) {
+            JOptionPane.showMessageDialog(null, "Add Book Success!");
+            return"WEB-INF/View/add-book.jsp";
+        } else {
+            req.setAttribute("error_message", "Incorrect Add Book");
+            return"WEB-INF/View/add-book.jsp";
+        }
     }
 }

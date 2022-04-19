@@ -22,6 +22,9 @@
                 </div>
                 <input type="submit" name="" value="submit">
             </form>
+            <div class="create">
+                <a href="controller?command=addUserPage">Create new User</a>
+            </div>
         </div>
 
             </br>

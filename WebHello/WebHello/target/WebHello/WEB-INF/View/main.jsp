@@ -46,15 +46,6 @@
                  </form></div></div>
                  <div class="clear"> </div>
 
-                 <div class="grid3">
-                     <div class="dc_zoom_css">
-                         <span class="roll_css1">
-
-                         </span>
-                         <form action="controller?command=addUserPage" method="post">
-                             <input type="submit" name="addUser" value="addUser">
-                         </form></div></div>
-                 <div class="clear"> </div>
              </div>
          </div>
      </div>
