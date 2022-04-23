@@ -1,22 +1,22 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!doctype html>
+
 <html>
 <jsp:include page="fragment/header.jsp"></jsp:include>
 <link rel="stylesheet" href="static/css/adduserbook.css">
-
 <div class="movebd">
     <head>
         <meta charset="utf-8">
         <title>login UI</title>
     </head>
 <body>
+    <h2>Create New Book</h2>
     <div class="box">
-    <h2>Add Book</h2>
+        <h2>Create New Book</h2>
     <form action="controller?command=addbookPage" method="post">
         <div class="inputBox">
             <input type="text" name="name" required="">
-            <label>AddBook</label>
+            <label>Book Name</label>
         </div>
         <div class="inputBox">
             <input type="text" name="description" required="">
@@ -43,6 +43,12 @@
         </div>
     </form>
  </div>
+    </br>
+    <c:if test="${error_message != null}">
+        <div class="Create User-error">
+                ${error_message}
+        </div>
+    </c:if>
 </body>
 </div>
 </html>

@@ -60,8 +60,9 @@ public class UserDao {
                     resultSet.getString("name"),
                     resultSet.getInt("is_admin"));
         }
-
-        return null;
+        else{
+            return null;
+        }
     }
 
 

@@ -21,7 +21,7 @@ public class AddBookCommand implements Command {
         String locationID = req.getParameter("location_ID");
         String GENRE_ID = req.getParameter("genre_id");
         String description = req.getParameter("description");
-        Book book = new Book(book_id, name, publish_year, author, locationID, GENRE_ID, description);
+        Book book = new Book(name, publish_year, author, locationID, GENRE_ID, description);
         dao.save(book);
 
         if (book != null) {

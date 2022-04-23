@@ -13,7 +13,7 @@
     table
     {
     width:100%;
-    margin-top:20%;
+    margin-top:4%;
     height: 70%;
     }
 
@@ -40,7 +40,7 @@
             <th>Name</th>
             <th>SurName</th>
             <th>Login Account</th>
-
+            <th>Button</th>
         </tr>
 
         <c:forEach items="${users}" var="users">

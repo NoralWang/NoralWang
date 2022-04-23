@@ -4,11 +4,20 @@ public class User {
     private Integer id;
     private String name;
     private  int is_admin;
+    private String login;
 
     public User(Integer id, String name, int is_admin) {
         this.id = id;
         this.name = name;
         this.is_admin = is_admin;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public Integer getId() {

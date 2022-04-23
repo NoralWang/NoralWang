@@ -16,10 +16,10 @@ public class logincommand implements Command {
         String password =req.getParameter("password");
 
         UserDao dao=new UserDao();
-        User user =dao.login(login,password);
-
+        User user = dao.login(login,password);
         if (user!=null){
                 req.getSession().setAttribute("user",user);
+                req.getSession().setAttribute("login",login);
                 return"WEB-INF/View/main.jsp";
         }
         else{

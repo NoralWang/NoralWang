@@ -1,6 +1,7 @@
 package by.bsu.web.entity;
 
 public class addUser {
+    private int id;
     private String name;
     private String surname;
     private String login;
@@ -16,6 +17,13 @@ public class addUser {
         this.admin = admin;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

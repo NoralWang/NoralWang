@@ -1,10 +1,12 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<%--<%--%>
-
-<%--%>--%>
-<jsp:include page="fragment/header.jsp"></jsp:include>
+<c:if test="${user.is_admin==1}">
+    <jsp:include page="fragment/header.jsp"></jsp:include>
+</c:if>
+<c:if test="${user.is_admin!=1}">
+    <jsp:include page="fragment/hnormal.jsp"></jsp:include>
+</c:if>
 
 <link rel="stylesheet" href="static/css/booklist.css">
 <div class="movebd">
@@ -16,7 +18,7 @@
     table
     {
     width:100%;
-    margin-top:20%;
+    margin-top:4%;
     height: 70%;
     }
 
@@ -58,15 +60,12 @@
                 <td> ${books.location_ID}</td>
                 <td> ${books.publish_Year}</td>
                 <td> ${books.GENRE_ID}</td>
-               <td><a href="controller?command=bookinfo">
+               <td> <form action="controller?command&book_id=${books.book_id}" method="post">
                    <input type="submit" name="" value="View">
-               </a></td>
+               </form></td>
             </tr>
         </c:forEach>
-        <div id="pagination">
-            <button id="prev"></button>
-            <span id="pages"></span>
-            <button id="next"></button>
+
         </div>
     </table>
 <br>

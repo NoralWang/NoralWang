@@ -31,7 +31,6 @@ public class Controller extends HttpServlet {
         String commandPara=req.getParameter("command");
         Command command =factory.create(commandPara);
         try {
-
             String page = command.execute(req, resp);
             req.getRequestDispatcher(page).forward(req,resp);
         } catch (SQLException | ClassNotFoundException e) {

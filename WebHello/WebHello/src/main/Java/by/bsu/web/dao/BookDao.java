@@ -7,15 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookDao {
-    public Book findById(int id)throws SQLException {
+    public Book findById(int book_id)throws SQLException {
         connectionFactory factory = new connectionFactory();
         Connection connection = factory.create();
-
         PreparedStatement statement = connection.
-                prepareStatement("select book_id, name from book where book_id =?");
-        statement.setInt(1,id);
+                prepareStatement("select book_id, name,description from book where book_id =?");
+        statement.setInt(1,book_id);
         ResultSet resultSet = statement.executeQuery();
-
         List<Book> books=map(resultSet);
         return books.size() ==1?books.get(0):null;
     }
@@ -23,7 +21,8 @@ public class BookDao {
     public  List<Book> findAll() throws SQLException {
         connectionFactory factory =new connectionFactory();
         try(Connection connection =factory.create()) {
-            PreparedStatement statement = connection.prepareStatement("select book_id,name,publish_year,author,location_id,GENRE_ID,description from book");
+            PreparedStatement statement = connection.prepareStatement
+                    ("select book_id,name,publish_year,author,location_id,GENRE_ID,description from book");
             ResultSet resultSet = statement.executeQuery();
             return  map(resultSet);
         }
@@ -46,14 +45,13 @@ public class BookDao {
     private List<Book> map(ResultSet resultSet) throws SQLException {
         List<Book> books = new ArrayList<>();
         while (resultSet.next()) {
-            String book_id = resultSet.getString("book_id");
             String name = resultSet.getString("name");
             String publish_year=resultSet.getString("publish_Year");
             String author= resultSet.getString("author");
             String location_ID=resultSet.getString("location_ID");
             String GENRE_ID=resultSet.getString("genre_id");
             String description=resultSet.getString("description");
-            Book book = new Book(book_id ,name,publish_year,author,location_ID,GENRE_ID,description);
+            Book book = new Book(name,publish_year,author,location_ID,GENRE_ID,description);
             books.add(book);
         }
         return books;

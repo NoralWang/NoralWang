@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ReturnCommand implements Command{
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ClassNotFoundException {
-        return"WEB-INF/View/bookinfo.jsp";
 
+        return"WEB-INF/View/returnbook.jsp";
     }
 }
