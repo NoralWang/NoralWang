@@ -3,12 +3,12 @@ package by.bsu.web.entity;
 public class User {
     private Integer id;
     private String name;
-    private  boolean admin;
+    private  int is_admin;
 
-    public User(Integer id, String name, boolean isAdmin) {
+    public User(Integer id, String name, int is_admin) {
         this.id = id;
         this.name = name;
-        this.admin = admin;
+        this.is_admin = is_admin;
     }
 
     public Integer getId() {
@@ -27,11 +27,11 @@ public class User {
         this.name = name;
     }
 
-    public boolean isAdmin() {
-        return admin;
+    public int getIs_admin() {
+        return is_admin;
     }
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
+    public void setIs_admin(int is_admin) {
+        this.is_admin = is_admin;
     }
 }

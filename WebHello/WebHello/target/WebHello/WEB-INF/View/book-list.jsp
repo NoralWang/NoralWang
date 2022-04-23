@@ -1,7 +1,11 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
+<%--<%--%>
+
+<%--%>--%>
 <jsp:include page="fragment/header.jsp"></jsp:include>
+
 <link rel="stylesheet" href="static/css/booklist.css">
 <div class="movebd">
     <head>
@@ -53,7 +57,7 @@
                 <td>${books.description}</td>
                 <td> ${books.location_ID}</td>
                 <td> ${books.publish_Year}</td>
-                <td>  ${books.GENRE_ID}</td>
+                <td> ${books.GENRE_ID}</td>
                <td><a href="controller?command=bookinfo">
                    <input type="submit" name="" value="View">
                </a></td>

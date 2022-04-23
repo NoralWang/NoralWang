@@ -7,7 +7,6 @@ D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\entity\User.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\BookListCommand.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\Command.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\ReturnCommand.java
-D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\dao\AddUserDao.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\AdduserPage.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\dao\BookDao.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\Bookinfopage.java

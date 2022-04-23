@@ -1,7 +1,9 @@
 package by.bsu.web.command;
 
 import by.bsu.web.dao.BookDao;
+import by.bsu.web.dao.UserDao;
 import by.bsu.web.entity.Book;
+import by.bsu.web.entity.addUser;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +18,7 @@ public class BookListCommand implements Command {
         BookDao dao=new BookDao();
         List<Book> books=dao.findAll();
         req.setAttribute("books",books);
+
         return"WEB-INF/View/book-list.jsp";
     }
 }

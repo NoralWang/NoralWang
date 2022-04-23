@@ -46,13 +46,14 @@ public class BookDao {
     private List<Book> map(ResultSet resultSet) throws SQLException {
         List<Book> books = new ArrayList<>();
         while (resultSet.next()) {
+            String book_id = resultSet.getString("book_id");
             String name = resultSet.getString("name");
             String publish_year=resultSet.getString("publish_Year");
             String author= resultSet.getString("author");
             String location_ID=resultSet.getString("location_ID");
             String GENRE_ID=resultSet.getString("genre_id");
             String description=resultSet.getString("description");
-            Book book = new Book(name,publish_year,author,location_ID,GENRE_ID,description);
+            Book book = new Book(book_id ,name,publish_year,author,location_ID,GENRE_ID,description);
             books.add(book);
         }
         return books;

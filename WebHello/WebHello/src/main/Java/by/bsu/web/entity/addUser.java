@@ -1,7 +1,6 @@
 package by.bsu.web.entity;
 
 public class addUser {
-
     private String name;
     private String surname;
     private String login;
@@ -9,12 +8,14 @@ public class addUser {
     private  Integer admin;
 
     public addUser(String name, String surname, String login, String password, Integer admin) {
+
         this.name = name;
         this.surname = surname;
         this.login = login;
         this.password = password;
         this.admin = admin;
     }
+
 
     public String getName() {
         return name;

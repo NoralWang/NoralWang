@@ -19,8 +19,8 @@ public class logincommand implements Command {
         User user =dao.login(login,password);
 
         if (user!=null){
-            req.getSession().setAttribute("user",user);
-            return"WEB-INF/View/main.jsp";
+                req.getSession().setAttribute("user",user);
+                return"WEB-INF/View/main.jsp";
         }
         else{
             req.setAttribute("error_message","Incorrect user or password");

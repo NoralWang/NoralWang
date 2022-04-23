@@ -14,7 +14,6 @@ by\bsu\web\command\BookListCommand.class
 by\bsu\web\command\Bookinfopage.class
 by\bsu\web\dao\connectionFactory.class
 by\bsu\web\command\ReturnCommand.class
-by\bsu\web\dao\AddUserDao.class
 by\bsu\web\command\AddBookCommand.class
 by\bsu\web\entity\User.class
 by\bsu\web\command\AdduserPage.class

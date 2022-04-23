@@ -1,6 +1,5 @@
 package by.bsu.web.command;
 
-import by.bsu.web.command.Command;
 import by.bsu.web.dao.BookDao;
 import by.bsu.web.entity.Book;
 
@@ -8,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.*;
 import java.sql.SQLException;
-import java.util.List;
 
 public class AddBookCommand implements Command {
     @Override
@@ -16,13 +14,14 @@ public class AddBookCommand implements Command {
             throws SQLException, ClassNotFoundException {
 
         BookDao dao = new BookDao();
+        String book_id = req.getParameter("book_id");
         String name = req.getParameter("name");
         String publish_year = req.getParameter("publish_Year");
         String author = req.getParameter("author");
         String locationID = req.getParameter("location_ID");
         String GENRE_ID = req.getParameter("genre_id");
         String description = req.getParameter("description");
-        Book book = new Book(name, publish_year, author, locationID, GENRE_ID, description);
+        Book book = new Book(book_id, name, publish_year, author, locationID, GENRE_ID, description);
         dao.save(book);
 
         if (book != null) {

@@ -15,8 +15,12 @@
     <h2>Add Book</h2>
     <form action="controller?command=addbookPage" method="post">
         <div class="inputBox">
+            <input type="text" name="book_id" required="">
+            <label>Book ID</label>
+        </div>
+        <div class="inputBox">
             <input type="text" name="name" required="">
-            <label>AddBook</label>
+            <label>Book Name</label>
         </div>
         <div class="inputBox">
             <input type="text" name="description" required="">

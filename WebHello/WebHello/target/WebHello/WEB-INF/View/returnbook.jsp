@@ -13,30 +13,10 @@
 <body>
     <div class="box">
     <h2>Add Book</h2>
-    <form action="controller?command=addbookPage" method="post">
+    <form action="controller?command=Rtbook=" method="post">
         <div class="inputBox">
-            <input type="text" name="name" required="">
-            <label>AddBook</label>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="description" required="">
-            <label>description</label>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="publish_Year" required="">
-            <label>publishYear</label>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="location_ID" required="">
-            <label>locationID</label>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="author" required="">
-            <label>author</label>
-        </div>
-        <div class="inputBox">
-            <input type="text" name="genre_id" required="">
-            <label>genre_id</label>
+            <input type="text" name="book_id" required="">
+            <label>Book ID</label>
         </div>
         <div align="center">
         <input type="submit" name="" value="submit">
