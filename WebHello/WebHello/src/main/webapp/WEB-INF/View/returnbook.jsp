@@ -18,7 +18,7 @@
 <body>
     <div class="box">
     <h2>Add Book</h2>
-    <form action="controller?command=Rtbook=${books.book_id}" method="post">
+    <form action="controller?command=Rtbook}" method="post">
         <div class="inputBox">
             <input type="text" name="book_id" required="">
             <label>Book ID</label>

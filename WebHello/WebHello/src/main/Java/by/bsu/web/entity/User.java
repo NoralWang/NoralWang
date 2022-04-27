@@ -12,6 +12,7 @@ public class User {
         this.is_admin = is_admin;
     }
 
+
     public String getLogin() {
         return login;
     }

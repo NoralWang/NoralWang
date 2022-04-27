@@ -20,8 +20,16 @@ body {
     text-align: center;
     position: relative;
 }
-.movebd .pagination {
-    text-align: center;
+.movebd .queryst {
+    position: relative;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #4CAF50;
+    height: 20%;
+    width: 100%;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 10px; /*登录窗口边角圆滑*/
 }
 
 .movebd .table, td, th
@@ -42,12 +50,10 @@ body {
     text-align:center;
 }
 
-.movebd .box h3{
-    padding:0;
-    color:#fff;
-}
+
 .movebd input[type="submit"]
 {
+    position: relative;
     border: none;
     outline: none;
     color: #fff;
@@ -55,32 +61,22 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    bottom: 10px;
 }
 
-.movebd .queryst {
-    background-color: white;
-    position: relative;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #4CAF50;
-    padding: 1px 16px;
-    height: 20%;
-}
 .movebd .queryst .inputBox
 {
     position:relative;
 }
 .movebd .queryst .inputBox input
 {
-    width: 100%;
-    padding: 10px 0;
+    width: 10%;
+    padding:0;
     font-side:16px;
     color: #8bb2aa;
     letter-spacing: 1px;
     margin-bottom:30px;/*输入框设置*/
-    border:none;
-    border-bottom:1px solid #8bb2aa;
-    outline:none;
+    border:1px solid #8bb2aa;
     background:transparent;
 }
 .movebd .queryst .inputBox label
@@ -90,7 +86,7 @@ body {
     left: 0;
     padding: 10px 0;
     font-size: 16px;
-    color: #fff;
+    color: #8bb2aa;
     pointer-events: none;
     transition: .5s;
 }
@@ -116,128 +112,3 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.movebd .box{
-    position: relative;
-    width: 25%;
-    height: 30%;
-    float: left;
-    margin-right: 8%;
-}
-
-.movebd .wrap
-{
-    width:70%;
-    margin: 0 auto;
-}
-/**********about-style**********/
-.movebd .grid{
-    position: relative;
-}
-.movebd .social {
-    position: absolute;
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -webkit-transition: -webkit-transform 1s;
-    text-align: center;
-    left: 21%;
-    top: 22%;
-}
-.movebd .social ul li{
-    float: left;
-}
-.movebd .social ul{
-    background: rgba(27,188,155, 1);
-    padding: 0.5em 0.5em 0.5em 0.5em;
-    border-radius: 2px;
-}
-
-.movebd .about
-{
-    width:70%;
-    height: 20%;
-    left: 20%;
-    text-align:center;
-    padding: 5em 0em;
-    border-style: solid;
-    border-color: bisque;
-}
-.movebd .about h2{
-    color:#fff;
-    font-size:2em;
-    padding-bottom: 0.5em;
-}
-.movebd .about p{
-    color:#fff;
-    font-size:1em;
-    padding-bottom: 4em;
-}
-.movebd .about-grids
-{
-    width:100%;
-    margin: 0 auto;
-}
-.movebd .grid1
-{
-    width: 25%;
-    height: 100%;
-    float: left;
-    background: url("../image/1.png");
-    background-size: cover;
-    margin-right: 8%;
-}
-.movebd .grid2
-{
-    width: 25%;
-    height: 100%;
-    float: left;
-    background: url("../image/2.png");
-    background-size: cover;
-    margin-right: 8%;
-}
-.movebd .dc_zoom_css span.roll_css6:hover {
-    opacity: 0.9;
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -webkit-transition: -webkit-transform 1s;
-}
-.movebd .dc_zoom_css span.roll_css6 {
-
-    -o-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -webkit-transition: -webkit-transform 1s;
-    height: 100%;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-}
-
-.movebd .dc_zoom_css span.roll_css6 img:hover {
-    opacity:1;
-}
-
-.movebd .post-person{
-    width:100%;
-}

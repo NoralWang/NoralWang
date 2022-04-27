@@ -13,8 +13,8 @@ public class Bookinfopage implements Command{
             throws SQLException, ClassNotFoundException {
         int id=Integer.parseInt(req.getParameter("book_id"));
         BookDao dao = new BookDao();
-        Book book= dao.findById(id);
-        req.setAttribute("book",book);
+        Book book_id= dao.findById(id);
+        req.setAttribute("book_id",book_id);
         return"WEB-INF/View/bookinfo.jsp";
 
     }

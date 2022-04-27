@@ -5,6 +5,7 @@ by\bsu\web\command\maincommand.class
 by\bsu\web\Controller.class
 by\bsu\web\dao\UserDao.class
 by\bsu\web\command\BorrowHisCommand.class
+by\bsu\web\command\Sucesspage.class
 by\bsu\web\command\addUsercommand.class
 by\bsu\web\command\AddBookPage.class
 by\bsu\web\command\Command.class
@@ -14,7 +15,9 @@ by\bsu\web\command\BookListCommand.class
 by\bsu\web\command\Bookinfopage.class
 by\bsu\web\dao\connectionFactory.class
 by\bsu\web\command\ReturnCommand.class
+by\bsu\web\entity\History.class
 by\bsu\web\command\AddBookCommand.class
+by\bsu\web\dao\HisDao.class
 by\bsu\web\entity\User.class
 by\bsu\web\command\AdduserPage.class
 by\bsu\web\entity\addUser.class

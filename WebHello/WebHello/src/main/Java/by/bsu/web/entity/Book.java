@@ -1,7 +1,7 @@
 package by.bsu.web.entity;
 
 public class Book {
-    private String book_id;
+    private Integer book_id;
     private String name;
     private String publish_Year;
     private String author;
@@ -9,7 +9,8 @@ public class Book {
     private String GENRE_ID;
     private String description;
 
-    public Book( String name, String publish_Year, String author, String location_ID, String GENRE_ID, String description) {
+    public Book( int book_id,String name, String publish_Year, String author, String location_ID, String GENRE_ID, String description) {
+        this.book_id = book_id;
         this.name = name;
         this.publish_Year = publish_Year;
         this.author = author;
@@ -18,11 +19,11 @@ public class Book {
         this.description = description;
     }
 
-    public String getBook_id() {
+    public Integer getBook_id() {
         return book_id;
     }
 
-    public void setBook_id(String book_id) {
+    public void setBook_id(Integer book_id) {
         this.book_id = book_id;
     }
 

@@ -18,7 +18,7 @@ public class addUsercommand implements Command{
         String surname =req.getParameter("surname");
         String login = req.getParameter("login");
         String password=req.getParameter("password");
-        addUser users = new addUser(name,surname,login,password,0);
+        addUser users = new addUser(Integer.parseInt(" "),name,surname,login,password,0);
         adduser.save(users);
 
         if (users!=null){

@@ -17,6 +17,7 @@ public class UserDao {
         }
     }
 
+
     public void save (addUser user) throws ClassNotFoundException, SQLException {
         connectionFactory factory =new connectionFactory();
         Connection con = factory.create();
@@ -38,11 +39,12 @@ public class UserDao {
             String surname = resultSet.getString("surname");
             String login = resultSet.getString("login");
             String password = resultSet.getString("password");
-            addUser users = new addUser(name,surname,login,password,0);
+            addUser users = new addUser(id,name,surname,login,password,0);
             adduser.add(users);
         }
         return adduser;
     }
+
 
     public User login(String login, String password) throws SQLException, ClassNotFoundException {
 

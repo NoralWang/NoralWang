@@ -27,6 +27,8 @@ public class CommandFactory {
                 return new UserMCommand();
             case"bookinfo":
                 return new Bookinfopage();
+            case "successpage":
+                return new Sucesspage();
 
 
             default:

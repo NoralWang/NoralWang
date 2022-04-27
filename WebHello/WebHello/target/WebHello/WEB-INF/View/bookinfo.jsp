@@ -7,7 +7,7 @@
 <c:if test="${user.is_admin!=1}">
     <jsp:include page="fragment/hnormal.jsp"></jsp:include>
 </c:if>
-<link rel="stylesheet" href="static/css/booklist.css">
+<link rel="stylesheet" href="static/css/bookinfo.css">
 <div class="movebd">
     <head>
         <meta charset="utf-8">
@@ -21,17 +21,17 @@
 
            </div>
            <div class="box">
-               <h3> ${book.name}</h3>
-               <p> ${books.id}</p>
-               <p> ${books.author}</p>
-               <p> ${books.description}</p>
+               <h3> ${book_id.name}</h3>
+               <h3> ${book_id.book_id}</h3>
+                   <h3> ${book_id.author}</h3>
+                       <h3> ${book_id.description}</h3>
 
                <form action="controller?command=Return" method="post">
                    <input type="submit" name=" " value="Return">
                        </form>
-                       <form action="controller?command=bookinfo" method="post">
-                           <input type="submit" name=" " value="Borrow">
-                       </form>
+               <a href="controller?command=successpage&book_id=${book_id.book_id}&userid=${user.id}&login=
+        ${login}">
+                   <input type="submit" name=" " value="Borrow"></a>
                    </div>
        </div>
 

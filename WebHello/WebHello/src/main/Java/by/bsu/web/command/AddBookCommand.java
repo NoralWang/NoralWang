@@ -14,14 +14,13 @@ public class AddBookCommand implements Command {
             throws SQLException, ClassNotFoundException {
 
         BookDao dao = new BookDao();
-        String book_id = req.getParameter("book_id");
         String name = req.getParameter("name");
         String publish_year = req.getParameter("publish_Year");
         String author = req.getParameter("author");
         String locationID = req.getParameter("location_ID");
         String GENRE_ID = req.getParameter("genre_id");
         String description = req.getParameter("description");
-        Book book = new Book(name, publish_year, author, locationID, GENRE_ID, description);
+        Book book = new Book(Integer.parseInt(" "),name, publish_year, author, locationID, GENRE_ID, description);
         dao.save(book);
 
         if (book != null) {

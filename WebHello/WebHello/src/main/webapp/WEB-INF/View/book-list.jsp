@@ -60,9 +60,9 @@
                 <td> ${books.location_ID}</td>
                 <td> ${books.publish_Year}</td>
                 <td> ${books.GENRE_ID}</td>
-               <td> <form action="controller?command&book_id=${books.book_id}" method="post">
-                   <input type="submit" name="" value="View">
-               </form></td>
+               <td><a href="controller?command=bookinfo&book_id=${books.book_id}">
+                   <input type="submit" name=" " value="View"></a>
+               </td>
             </tr>
         </c:forEach>
 
