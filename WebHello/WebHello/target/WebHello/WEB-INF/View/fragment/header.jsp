@@ -43,7 +43,7 @@
     <li><a class="active" href="controller?command=Return">Main Page</a></li>
     <li><a href="controller?command=booklist" >Book List</a></li>
     <li><a href="controller?command=Rtbook">Return Book</a></li>
-    <li><a href="controller?command=history">Borrowing History</a></li>
+    <li><a href="controller?command=history&id=${user.id}">Borrowing History</a></li>
     <li><a href="controller?command=userManagement">User Management</a></li>
     <li><a href="controller?command=addbook">Add Book</a></li>
     <li><a href="controller?command=addUserPage">Add User</a></li>
