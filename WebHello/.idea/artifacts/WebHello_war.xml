@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebHello:war">
+    <output-path>$PROJECT_DIR$/WebHello/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>WebHello</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="WebHello.war">
+      <element id="artifact" artifact-name="WebHello:war exploded" />
+    </root>
+  </artifact>
+</component>
