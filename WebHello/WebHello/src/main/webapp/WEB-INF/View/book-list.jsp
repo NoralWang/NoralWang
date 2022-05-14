@@ -14,16 +14,9 @@
         <meta charset="utf-8">
         <title>Booklist</title>
     </head>
-<style>
-    table
-    {
-    width:100%;
-    margin-top:4%;
-    height: 70%;
-    }
-
-</style>
     <body>
+    <div class="back">
+    </div>
     <div class="movebd">
     <div class="queryst">
         <form action="controller?command=selectbook" method="post">
@@ -35,16 +28,15 @@
             <input type="text" name="author" >
             <label>Author</label>
         </div>
-        <div align="center">
-           <input type="submit" name=" " value="Query">
-        </div>
-        </form>
+            <input type="submit" name=" " value="Query">
 
+        </form>
     </div>
     <table>
         <tr>
             <th>Book ID</th>
             <th>Name</th>
+            <th>Picture</th>
             <th>Author</th>
             <th>Description</th>
             <th>Location ID</th>
@@ -57,6 +49,7 @@
             <tr>
                 <td> ${books.book_id}</td>
                 <td> ${books.name}</td>
+                <td> <img src=${books.picture} alt="Book" style="width: 100px;height: 120px;margin: 0px;padding: 0px"></td>
                 <td> ${books.author}</td>
                 <td>${books.description}</td>
                 <td> ${books.location_ID}</td>

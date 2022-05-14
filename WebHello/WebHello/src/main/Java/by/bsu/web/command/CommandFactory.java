@@ -35,6 +35,8 @@ public class CommandFactory {
                 return new BookListSelectCommand();
             case "selectUser":
                 return new UserSelectCommand();
+            case "import":
+                return new ImportCommand();
 
 
             default:

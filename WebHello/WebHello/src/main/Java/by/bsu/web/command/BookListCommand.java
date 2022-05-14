@@ -18,7 +18,6 @@ public class BookListCommand implements Command {
         BookDao dao=new BookDao();
         List<Book> books=dao.findAll();
         req.setAttribute("books",books);
-
         return"WEB-INF/View/book-list.jsp";
     }
 }

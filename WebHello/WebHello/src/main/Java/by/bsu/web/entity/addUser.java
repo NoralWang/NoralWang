@@ -4,18 +4,21 @@ public class addUser {
     private int id;
     private String name;
     private String surname;
-    private String login;
+    private String loginac;
     private String password;
-    private  Integer admin;
+    private  Integer is_admin;
+    private  String picture;
 
-    public addUser(int id, String name, String surname, String login, String password, Integer admin) {
+    public addUser(int id, String name, String surname, String loginac, String password, Integer is_admin, String picture) {
         this.id = id;
         this.name = name;
         this.surname = surname;
-        this.login = login;
+        this.loginac = loginac;
         this.password = password;
-        this.admin = admin;
+        this.is_admin = is_admin;
+        this.picture = picture;
     }
+
 
     public int getId() {
         return id;
@@ -41,12 +44,12 @@ public class addUser {
         this.surname = surname;
     }
 
-    public String getLogin() {
-        return login;
+    public String getLoginac() {
+        return loginac;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setLoginac(String loginac) {
+        this.loginac = loginac;
     }
 
     public String getPassword() {
@@ -57,12 +60,20 @@ public class addUser {
         this.password = password;
     }
 
-    public Integer getAdmin() {
-        return admin;
+    public Integer getIs_admin() {
+        return is_admin;
     }
 
-    public void setAdmin(Integer admin) {
-        this.admin = admin;
+    public void setIs_admin(Integer is_admin) {
+        this.is_admin = is_admin;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 }
 

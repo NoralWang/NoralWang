@@ -17,20 +17,20 @@ public class HisDao {
         try(Connection connection =factory.create()) {
             if (id==2122){
                 PreparedStatement statement = connection.prepareStatement("select * from history \n" +
-                        "LEFT JOIN book\n" +
-                        "on book.BOOK_ID=history.BOOK_ID");
+                        "  inner JOIN book\n" +
+                        "  on history.BOOK_ID=book.BOOK_ID\n" +
+                        "  ORDER BY history.borr_time");
                 ResultSet resultSet = statement.executeQuery();
-                System.out.println("login2"+id);
                 return  mapuser(resultSet);
 
             }
 
             else{
-                System.out.println("login3"+id);
                 PreparedStatement statement = connection.prepareStatement("select * from history \n" +
-                        "LEFT JOIN book\n" +
-                        "on book.BOOK_ID=history.BOOK_ID\n" +
-                        "and history.borr_userid=?");
+                        "  inner JOIN book\n" +
+                        "  on history.BOOK_ID=book.BOOK_ID\n" +
+                        "  and history.borr_userid=?\n" +
+                        "  ORDER BY history.borr_time");
                 statement.setInt(1, id);
                 ResultSet resultSet = statement.executeQuery();
                 return  mapuser(resultSet);

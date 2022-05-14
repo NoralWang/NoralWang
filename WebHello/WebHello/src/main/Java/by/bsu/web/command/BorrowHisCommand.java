@@ -15,10 +15,10 @@ public class BorrowHisCommand implements Command{
     public String execute(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ClassNotFoundException {
 
         Integer id = Integer.parseInt(req.getParameter("id"));
+        System.out.println("id"+id);
         HisDao hisdao = new HisDao();
         List<History> history=hisdao.findall(id);
         req.setAttribute("history",history);
-        System.out.println(history);
         return"WEB-INF/View/borrhistory.jsp";
     }
 }

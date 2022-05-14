@@ -15,24 +15,32 @@
         <title>Book Information</title>
     </head>
     <body>
+    <div class="back">
+    </div>
     <div class="movebd">
        <h2>Book Info</h2>
        <div class="about" id="about">
            <div class="wrap">
-            <img src="../../static/image/1.png" alt="" >
+               <a target="_blank" href=${book_id.picture}>
+                   <img src=${book_id.picture}; alt="Book Name" width="290" height="360">
+               </a>
            </div>
            <div class="box">
-               <h3> ${book_id.name}</h3>
-               <h3> ${book_id.book_id}</h3>
-                   <h3> ${book_id.author}</h3>
-                       <h3> ${book_id.description}</h3>
+               <h3>Name:</h3>
+               <h4>${book_id.name}</h4>
+               <h3>Book ID:</h3>
+               <h4> ${book_id.book_id}</h4>
+               <h3> Author</h3>
+               <h4>${book_id.author}</h4>
+               <h3> Description</h3>
+               <p> ${book_id.description}</p>
 
-               <form action="controller?command=Return" method="post">
+               <form action="controller?command=booklist" method="post">
                    <input type="submit" name=" " value="Return">
                </form>
                <a href="controller?command=successpage&book_id=${book_id.book_id}&userid=${user.id}&login=
                      ${login}">
-               <input type="submit" name=" " value="Borrow"></a>
+               <input type="submit" name=" " value="Borrow" style="margin-left: 30px"></a>
            </div>
        </div>
 

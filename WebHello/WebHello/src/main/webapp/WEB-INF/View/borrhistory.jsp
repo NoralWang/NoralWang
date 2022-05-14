@@ -6,20 +6,18 @@
     <head>
         <meta charset="utf-8">
         <title>Booklist</title>
-        <jsp:include page="fragment/header.jsp"></jsp:include>
+        <c:if test="${user.is_admin==1}">
+            <jsp:include page="fragment/header.jsp"></jsp:include>
+        </c:if>
+        <c:if test="${user.is_admin!=1}">
+            <jsp:include page="fragment/hnormal.jsp"></jsp:include>
+        </c:if>
 
         <link rel="stylesheet" href="static/css/booklist.css">
     </head>
-<style>
-    table
-    {
-    width:100%;
-    margin-top:4%;
-    height: 70%;
-    }
-
-</style>
     <body>
+    <div class="back">
+    </div>
     <div class="movebd">
     <table>
         <tr>
@@ -44,21 +42,17 @@
                 <td> ${history.borr_userid}</td>
                 <td> ${history.borr_username}</td>
                 <td>${history.return_time}</td>
-
-            <td>
-            <a href="controller?command=Rtbook&book_id=${history.book_id}">
-                   <input type="submit" name="" value="Update">
-               </a>
-            </td>
+                <td>
+                    <a href="controller?command=Rtbook&book_id=${history.book_id}">
+                        <c:if test="${history.return_time==null}">
+                        <input type="submit" name="" value="Ruturn">
+                        </c:if>
+                    </a>
+                 </td>
             </tr>
         </c:forEach>
-        <div id="pagination">
-            <button id="prev"></button>
-            <span id="pages"></span>
-            <button id="next"></button>
-        </div>
     </table>
 <br>
+    </div>
     </body>
-</div>
 </html>

@@ -8,8 +8,9 @@ public class Book {
     private String location_ID;
     private String GENRE_ID;
     private String description;
+    private String picture;
 
-    public Book( int book_id,String name, String publish_Year, String author, String location_ID, String GENRE_ID, String description) {
+    public Book(Integer book_id, String name, String publish_Year, String author, String location_ID, String GENRE_ID, String description, String picture) {
         this.book_id = book_id;
         this.name = name;
         this.publish_Year = publish_Year;
@@ -17,6 +18,15 @@ public class Book {
         this.location_ID = location_ID;
         this.GENRE_ID = GENRE_ID;
         this.description = description;
+        this.picture = picture;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public Integer getBook_id() {

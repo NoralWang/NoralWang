@@ -7,16 +7,19 @@
     <style>
         body {
             margin: 0;
+
         }
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             width: 20%;
-            background-color: #f1f1f1;
             position: fixed;
             height: 100%;
             overflow: auto;
+            border-width:1px;
+            border-color: #38779d;
+            border-style:solid;
         }
         li a {
             display: block;
@@ -26,7 +29,7 @@
         }
 
         li a.active {
-            background-color:#4CAF50;
+            background-color: #45aeec;
             color: white;
         }
 
@@ -34,19 +37,22 @@
             background-color: #555;
             color: white;
         }
+
     </style>
 </head>
 <body>
 <div class="header">
+
 <ul>
     <li><a class="active" href="controller?command=Return">Main Page</a></li>
     <li><a href="controller?command=booklist" >Book List</a></li>
-    <li><a href="controller?command=Rtbookpage">Return Book</a></li>
     <li><a href="controller?command=history&id=${user.id}">Borrowing History</a></li>
     <li><a href="controller?command=userManagement">User Management</a></li>
+    <li><a href="controller?command=Rtbookpage">Return Book</a></li>
     <li><a href="controller?command=addbook">Add Book</a></li>
-    <li><a href="controller?command=addUserPage">Add User</a></li>
+    <li><a href="controller?command=addUserPage&uid=1">Add User</a></li>
     <li><a href="controller?command=logout">Logout</a></li>
+<%--    <li><a href="controller?command=import">new</a></li>--%>
 
 </ul>
 </div>

@@ -1,14 +1,24 @@
 body {
-	background-color: white;
 	position: relative;
 }
+.back{
+	z-index: -999;
+	height: 100%;
+	width: 100%;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: url("../image/back1.jpg");
+	background-size: cover;
+}
+
 .movebd{
-	background-color: white;
 	position: relative;
-	border-style:solid;
 	margin-left:20%;
-	border-width:5px;
-	border-color: #4CAF50;
 	padding:1px 16px;
 	height: 100%;
 }
@@ -16,18 +26,18 @@ body {
 {
 	margin:0 0 30px;
 	padding:0;
-	color:rgb(139, 178, 170);
+	color: rgb(44, 111, 145);
 	text-align:center;
 }
 .movebd .box
 {
 	position: absolute;
-	top: 350%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width:400px;
 	padding: 40px 40px 0px 40px;
-	background: rgb(139, 178, 170);
+	background: rgba(44, 111, 145, 0.09);
 	box-sizing:border-box;
 	box-shadow:0 15px 25px rgba(0,0,0,.5);
 	border-radius: 10px;/*登录窗口边角圆滑*/
@@ -67,13 +77,19 @@ body {
 	pointer-events: none;
 	transition: .5s;
 }
+.movebd .box fieldset
+{
+	border: none;
+	margin-bottom: 20px;
+	padding: 5px;
+}
 .movebd .box .inputBox input:focus ~ label,
 .movebd .box .inputBox input:valid ~ label
 {
-	top: -18px;
+	top: -30px;
 	left: 0;
-	color: #03a9f4;
-	font-size: 12px;
+	color: #80aaea;
+	font-size: 15px;
 }
 .movebd .box  input[type="submit"]
 {
@@ -81,7 +97,9 @@ body {
 	border: none;
 	outline: none;
 	color: #fff;
-	background: #80aaea;
+	background: #9eb7de;
+	border: 1px solid #8699b4;
+	font-size: 18px;
 	padding: 10px 20px;
 	cursor: pointer;
 	border-radius: 5px;

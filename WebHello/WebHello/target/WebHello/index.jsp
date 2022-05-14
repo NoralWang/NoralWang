@@ -25,7 +25,7 @@
                 </div>
             </form>
             <div class="create">
-                <a href="controller?command=addUserPage">Create new User</a>
+                <a href="controller?command=addUserPage&uid=2">Create new User</a>
             </div>
         </div>
 

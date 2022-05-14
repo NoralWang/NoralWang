@@ -10,6 +10,7 @@ D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\logincommand.j
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\entity\Book.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\BorrowHisCommand.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\UserMCommand.java
+D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\ImportCommand.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\command\AddBookPage.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\dao\HisDao.java
 D:\projectTest\WebHello\WebHello\src\main\java\by\bsu\web\entity\History.java

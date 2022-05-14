@@ -15,6 +15,7 @@ public class Bookinfopage implements Command{
         BookDao dao = new BookDao();
         Book book_id= dao.findById(id);
         req.setAttribute("book_id",book_id);
+        System.out.println(book_id);
         return"WEB-INF/View/bookinfo.jsp";
 
     }

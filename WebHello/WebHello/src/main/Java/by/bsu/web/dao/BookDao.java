@@ -65,7 +65,7 @@ public class BookDao {
         connectionFactory factory =new connectionFactory();
         try(Connection connection =factory.create()) {
             PreparedStatement statement = connection.prepareStatement
-                    ("select book_id,name,publish_year,author,location_id,GENRE_ID,description from book where delete_yn <> 'Y' or delete_yn is null");
+                    ("select * from book where delete_yn <> 'Y' or delete_yn is null");
             ResultSet resultSet = statement.executeQuery();
             return  map(resultSet);
         }
@@ -76,13 +76,13 @@ public class BookDao {
         try(Connection connection =factory.create()) {
             String sql="select * from book";
             if (name!=""&& author!=""){
-               sql +=" where name=? and author=?";
+               sql +=" where name LIKE '%' ? '%' and author LIKE '%' ? '%'";
             }
             else if (name==""&& author!=""){
-                sql += " where author=?";
+                sql += " where author LIKE '%' ? '%'";
             }
             else if (name!=""&& author==""){
-                sql += " where name=? ";
+                sql += " where name LIKE '%' ? '%' ";
             }
             else{
                 sql += " where name <> '' and author <> ''";
@@ -98,7 +98,6 @@ public class BookDao {
             else if (name!=""&& author==""){
                 statement.setString(1, name);
             }
-
             ResultSet resultSet = statement.executeQuery();
             return  map(resultSet);
         }
@@ -108,13 +107,14 @@ public class BookDao {
     public void save (Book book) throws ClassNotFoundException,SQLException{
         connectionFactory factory =new connectionFactory();
         Connection connection = factory.create();
-        PreparedStatement statement=connection.prepareStatement("insert into book(name,PUBLISH_YEAR,AUTHOR,LOCATION_ID,GENRE_ID,DESCRIPTION) values (?,?,?,?,?,?)");
+        PreparedStatement statement=connection.prepareStatement("insert into book(name,PUBLISH_YEAR,AUTHOR,LOCATION_ID,GENRE_ID,DESCRIPTION,picture) values (?,?,?,?,?,?,?)");
         statement.setString(1, book.getName());
         statement.setString(2, book.getPublish_Year());
         statement.setString(3, book.getAuthor());
         statement.setString(4, book.getLocation_ID());
         statement.setString(5, book.getGENRE_ID());
         statement.setString(6, book.getDescription());
+        statement.setString(7, book.getPicture());
         statement.executeUpdate();
     }
 
@@ -128,13 +128,13 @@ public class BookDao {
             String author= resultSet.getString("author");
             String location_ID=resultSet.getString("location_ID");
             String GENRE_ID=resultSet.getString("genre_id");
-            String description=resultSet.getString("description");
-            Book book = new Book(id,name,publish_year,author,location_ID,GENRE_ID,description);
+            String DESCRIPTION=resultSet.getString("DESCRIPTION");
+            String picture=resultSet.getString("picture");
+            Book book = new Book(id,name,publish_year,author,location_ID,GENRE_ID,DESCRIPTION,picture);
             books.add(book);
         }
         return books;
     }
-
 
 }
 
