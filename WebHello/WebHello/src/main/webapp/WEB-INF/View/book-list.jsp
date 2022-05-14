@@ -1,16 +1,16 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<c:if test="${user.is_admin==1}">
-    <jsp:include page="fragment/header.jsp"></jsp:include>
-</c:if>
-<c:if test="${user.is_admin!=1}">
-    <jsp:include page="fragment/hnormal.jsp"></jsp:include>
-</c:if>
 
-<link rel="stylesheet" href="static/css/booklist.css">
-<div class="movebd">
     <head>
+        <c:if test="${user.is_admin==1}">
+            <jsp:include page="fragment/header.jsp"></jsp:include>
+        </c:if>
+        <c:if test="${user.is_admin!=1}">
+            <jsp:include page="fragment/hnormal.jsp"></jsp:include>
+        </c:if>
+
+        <link rel="stylesheet" href="static/css/booklist.css">
         <meta charset="utf-8">
         <title>Booklist</title>
     </head>
@@ -24,19 +24,21 @@
 
 </style>
     <body>
+    <div class="movebd">
     <div class="queryst">
+        <form action="controller?command=selectbook" method="post">
         <div class="inputBox">
-            <input type="text" name="BookName" required="">
+            <input type="text" name="name" >
             <label>Name</label>
         </div>
         <div class="inputBox">
-            <input type="text" name="Author" required="">
+            <input type="text" name="author" >
             <label>Author</label>
         </div>
         <div align="center">
-            <input type="submit" name="" value="Query">
+           <input type="submit" name=" " value="Query">
         </div>
-
+        </form>
 
     </div>
     <table>
@@ -69,6 +71,7 @@
         </div>
     </table>
 <br>
+    </div>
     </body>
-</div>
+
 </html>

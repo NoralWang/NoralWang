@@ -71,6 +71,39 @@ public class BookDao {
         }
     }
 
+    public  List<Book> selectBook(String name,String author ) throws SQLException {
+        connectionFactory factory =new connectionFactory();
+        try(Connection connection =factory.create()) {
+            String sql="select * from book";
+            if (name!=""&& author!=""){
+               sql +=" where name=? and author=?";
+            }
+            else if (name==""&& author!=""){
+                sql += " where author=?";
+            }
+            else if (name!=""&& author==""){
+                sql += " where name=? ";
+            }
+            else{
+                sql += " where name <> '' and author <> ''";
+            }
+            PreparedStatement statement = connection.prepareStatement(sql);
+            if (name!=""&& author!=""){
+                statement.setString(1, name);
+                statement.setString(2, author);
+            }
+            else if (name==""&& author!=""){
+                statement.setString(1, author);
+            }
+            else if (name!=""&& author==""){
+                statement.setString(1, name);
+            }
+
+            ResultSet resultSet = statement.executeQuery();
+            return  map(resultSet);
+        }
+    }
+
 
     public void save (Book book) throws ClassNotFoundException,SQLException{
         connectionFactory factory =new connectionFactory();

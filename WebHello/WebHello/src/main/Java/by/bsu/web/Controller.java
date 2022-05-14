@@ -36,6 +36,5 @@ public class Controller extends HttpServlet {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 }

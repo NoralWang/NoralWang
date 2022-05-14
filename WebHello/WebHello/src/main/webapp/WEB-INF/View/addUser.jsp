@@ -1,16 +1,16 @@
 <%@ page contentType="text/html; charset=UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<c:if test="${user.is_admin!=1}">
-    <jsp:include page="fragment/hnormal.jsp"></jsp:include>
-</c:if>
-<link rel="stylesheet" href="static/css/adduserbook.css">
-<div class="movebd">
     <head>
+        <c:if test="${user.is_admin==1}">
+            <jsp:include page="fragment/header.jsp"></jsp:include>
+        </c:if>
+        <link rel="stylesheet" href="static/css/adduserbook.css">
         <title>New Account</title>
     <meta charset="utf-8">
     </head>
     <body>
+    <div class="movebd">
     <h2>Create User Page</h2>
     <div class="box">
         <h2>Create New Account</h2>
@@ -43,6 +43,6 @@
                 ${error_message}
         </div>
     </c:if>
-</body>
-</div>
+    </div>
+    </body>
 </html>

@@ -2,14 +2,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
-<jsp:include page="fragment/header.jsp"></jsp:include>
-<link rel="stylesheet" href="static/css/adduserbook.css">
-<div class="movebd">
     <head>
+        <jsp:include page="fragment/header.jsp"></jsp:include>
+        <link rel="stylesheet" href="static/css/adduserbook.css">
         <meta charset="utf-8">
         <title>login UI</title>
     </head>
 <body>
+
+<div class="movebd">
     <h2>Create New Book</h2>
     <div class="box">
         <h2>Create New Book</h2>
@@ -49,6 +50,6 @@
                 ${error_message}
         </div>
     </c:if>
-</body>
 </div>
+</body>
 </html>

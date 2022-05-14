@@ -8,7 +8,6 @@
         body {
             margin: 0;
         }
-
         ul {
             list-style-type: none;
             margin: 0;
@@ -27,7 +26,7 @@
         }
 
         li a.active {
-            background-color: #4CAF50;
+            background-color:#4CAF50;
             color: white;
         }
 
@@ -42,7 +41,7 @@
 <ul>
     <li><a class="active" href="controller?command=Return">Main Page</a></li>
     <li><a href="controller?command=booklist" >Book List</a></li>
-    <li><a href="controller?command=Rtbook">Return Book</a></li>
+    <li><a href="controller?command=Rtbookpage">Return Book</a></li>
     <li><a href="controller?command=history&id=${user.id}">Borrowing History</a></li>
     <li><a href="controller?command=userManagement">User Management</a></li>
     <li><a href="controller?command=addbook">Add Book</a></li>

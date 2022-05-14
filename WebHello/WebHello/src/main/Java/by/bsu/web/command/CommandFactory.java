@@ -14,13 +14,15 @@ public class CommandFactory {
             case "logout":
                 return new logincommand();
             case "Return":
-                return new maincommand();
+                return new mainPage();
             case "addUser":
                 return new addUsercommand();
             case "addUserPage":
                 return new AdduserPage();
+            case "Rtbookpage":
+                return new ReturnPageCommand();
             case "Rtbook":
-                return new ReturnCommand();
+                return new ReturnBookCommand();
             case "history":
                 return new BorrowHisCommand();
             case"userManagement":
@@ -29,6 +31,10 @@ public class CommandFactory {
                 return new Bookinfopage();
             case "successpage":
                 return new Sucesspage();
+            case "selectbook":
+                return new BookListSelectCommand();
+            case "selectUser":
+                return new UserSelectCommand();
 
 
             default:

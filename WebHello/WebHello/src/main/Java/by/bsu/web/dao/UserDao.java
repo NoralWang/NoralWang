@@ -1,5 +1,6 @@
 package by.bsu.web.dao;
 
+import by.bsu.web.entity.Book;
 import by.bsu.web.entity.User;
 import by.bsu.web.entity.addUser;
 
@@ -16,7 +17,38 @@ public class UserDao {
             return  mapuser(resultSet);
         }
     }
+    public  List<addUser> selectUser(String name, String userid ) throws SQLException {
+        connectionFactory factory =new connectionFactory();
+        try(Connection connection =factory.create()) {
+            String sql="select * from user";
+            if (name!=""&& userid!=""){
+                sql +=" where name=? and id=?";
+            }
+            else if (name==""&& userid!=""){
+                sql += " where id=?";
+            }
+            else if (name!=""&& userid==""){
+                sql += " where name=? ";
+            }
+            else{
+                sql += " where name <> '' and id <> ''";
+            }
+            PreparedStatement statement = connection.prepareStatement(sql);
+            if (name!=""&& userid!=""){
+                statement.setString(1, name);
+                statement.setString(2, userid);
+            }
+            else if (name==""&& userid!=""){
+                statement.setString(1, userid);
+            }
+            else if (name!=""&& userid==""){
+                statement.setString(1, name);
+            }
 
+            ResultSet resultSet = statement.executeQuery();
+            return  mapuser(resultSet);
+        }
+    }
 
     public void save (addUser user) throws ClassNotFoundException, SQLException {
         connectionFactory factory =new connectionFactory();

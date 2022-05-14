@@ -16,10 +16,9 @@ public class HisDao {
         connectionFactory factory =new connectionFactory();
         try(Connection connection =factory.create()) {
             if (id==2122){
-                PreparedStatement statement = connection.prepareStatement("select * from book \n" +
-                        "LEFT JOIN history \n" +
-                        "on book.BOOK_ID=history.BOOK_ID\n" +
-                        "where  book.delete_yn ='Y'");
+                PreparedStatement statement = connection.prepareStatement("select * from history \n" +
+                        "LEFT JOIN book\n" +
+                        "on book.BOOK_ID=history.BOOK_ID");
                 ResultSet resultSet = statement.executeQuery();
                 System.out.println("login2"+id);
                 return  mapuser(resultSet);
@@ -28,11 +27,10 @@ public class HisDao {
 
             else{
                 System.out.println("login3"+id);
-                PreparedStatement statement = connection.prepareStatement("select * from book \n" +
-                        "LEFT JOIN history \n" +
+                PreparedStatement statement = connection.prepareStatement("select * from history \n" +
+                        "LEFT JOIN book\n" +
                         "on book.BOOK_ID=history.BOOK_ID\n" +
-                        "where  book.delete_yn ='Y'\n" +
-                        "and history.borr_userid=? ");
+                        "and history.borr_userid=?");
                 statement.setInt(1, id);
                 ResultSet resultSet = statement.executeQuery();
                 return  mapuser(resultSet);
