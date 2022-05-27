@@ -18,6 +18,27 @@
 ;
             }
         </script>
+
+        <script type="text/javascript">
+            function l(evn){
+                var pictname = event.target.files[0].name;//获取上传的文件名
+                var divObj= $(evn).prev()  //获取div的DOM对象
+                $(divObj).html(pictname) //插入文件名
+                document.getElementById("path").innerText="static/image/"+pictname
+                var id = $(evn).attr('id');//获取id
+                var num = id.substr(4,1)
+                var file = event.target.files[0];
+                if (window.FileReader) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    //监听文件读取结束后事件
+                    reader.onloadend = function (e) {
+                        $("#"+num).attr("src",e.target.result);
+                    };
+                }
+            }
+        </script>
+
     </head>
     <body>
     <div class="back">
@@ -26,8 +47,23 @@
     <h2>Create & Update User Page</h2>
     <div class="box">
         <h2>Create & Update Account</h2>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
         <c:if test="${userinfo==''}">
         <form action="controller?command=addUser" method="post">
+            <div class="inputBoxfile">
+                <div class="iconlist">
+                    <div class="imgs" onclick="document.getElementById('img_1').click()">Select Picture</div>
+                    <input type="file" class="img" name="img[]" id="img_1" accept="image/*" onchange="l(this)"/>
+                </div>
+                <div class="iconlist">
+                    <div width="225px"><img src="" width="150px" height="150" id="1" alt="Select User Picture"
+                                            style="border: 1.5px solid black;margin-left: 50px"/></div>
+                </div>
+            </div>
+
+            <div class="inputBox" style="width: 100% ">
+                <textarea name="picture" id="path" style="display: none"></textarea>
+            </div>
             <div class="inputBox">
                 <input type="text" name="name" required="">
                 <label>Name</label>
@@ -36,14 +72,12 @@
                 <input type="text" name="surname" required="">
                 <label>SurName</label>
             </div>
+
             <div class="inputBox">
                 <input type="text" name="login" required="">
                 <label>LoginAccount</label>
             </div>
-            <div class="inputBox">
-                <input type="text" name="picture" required="">
-                <label>Picture</label>
-            </div>
+
             <div class="inputBox">
                 <input type="password" name="password" required="">
                 <label>Password</label>
@@ -61,9 +95,7 @@
                 <input type="radio"  name="admin" onclick="displayResult(this.value)" value="0" required="">
                 <label for="css">Not Admin</label><br>
             </fieldset>
-                <div class="create">
-                    <a href="controller?command=login">Back</a>
-                </div>
+
             </c:if>
             <div align="center">
                 <input type="submit" name=" " value="Submit">
@@ -123,7 +155,9 @@
             </form>
 
         </c:if>
-
+        <div class="create">
+            <a href="controller?command=login">Back</a>
+        </div>
     </div>
 
     </div>

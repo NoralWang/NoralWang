@@ -57,8 +57,7 @@ body {
 {
 	width: 100%;
 	padding: 10px 0;
-	font-side:16px;
-	color: #fff;
+	font-side:18px;
 	letter-spacing: 1px;
 	margin-bottom:30px;/*输入框设置*/
 	border:none;
@@ -109,6 +108,51 @@ body {
 	text-align:center;
 	margin:500px;
 	color: #f60227;
+}
+
+.movebd .box .inputBoxfile
+{
+	position:relative;
+	width: 100%;
+	height: 220px;
+	margin-left: 15px;
+}
+.movebd .box .inputBoxfile .iconlist {
+	margin-right: 50px
+}
+
+
+.movebd .box .inputBoxfile .iconlist	.img {
+	opacity: 0;
+}
+
+.movebd .box .inputBoxfile .iconlist .imgs {
+	border: 1px solid #89a7bb;
+	font-size: 18px;
+	background: #9eb7de;
+	color: white;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	padding: 10px;
+}
+.box .create
+{
+	position: relative;
+	margin:0 0 30px;
+	padding:15px 0 0 0;
+	right: 0;
+	text-align:right;
+	font-size:13px;
+	bottom: 0;
+}
+.box .create
+a:link, a:visited {
+	position: relative;
+	color: #80aaea;
+	font-size:13px;
+	text-align: right;
+	bottom: 0;
 }
 
 

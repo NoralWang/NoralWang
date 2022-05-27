@@ -7,9 +7,7 @@
     <style>
         body {
             margin: 0;
-            border-width:1px;
-            border-color: #2c6f91;
-            border-style:solid;
+
         }
         ul {
             list-style-type: none;
@@ -19,6 +17,9 @@
             position: fixed;
             height: 100%;
             overflow: auto;
+            border-width:1px;
+            border-color: #38779d;
+            border-style:solid;
         }
         li a {
             display: block;
@@ -28,7 +29,7 @@
         }
 
         li a.active {
-            background-color: #2c6f91;
+            background-color: #45aeec;
             color: white;
         }
 
