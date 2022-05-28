@@ -14,8 +14,9 @@
         <script>
             function displayResult(admin){
                 document.getElementById("is_admin1").value=admin;
+            }
+            function displayResult2(admin){
                 document.getElementById("is_admin2").value=admin;
-;
             }
         </script>
 
@@ -77,7 +78,6 @@
                 <input type="text" name="login" required="">
                 <label>LoginAccount</label>
             </div>
-
             <div class="inputBox">
                 <input type="password" name="password" required="">
                 <label>Password</label>
@@ -104,7 +104,6 @@
         </form>
 
         </c:if>
-
 
         <c:if test="${userinfo!=''}">
             <form action="controller?command=addUser" method="post">
@@ -134,23 +133,23 @@
                 </div>
                 <c:if test="${userinfo.is_admin==1}">
                     <fieldset>
-                        <input type="radio"  name="admin" value="1" checked="checked" onclick="displayResult(this.value) ">
+                        <input type="radio"  name="admin" value="1" checked="checked" onclick="displayResult2(this.value) ">
                         <label>Admin</label> <br>
-                        <input type="radio"  name="admin" value="0" onclick="displayResult(this.value)" >
+                        <input type="radio"  name="admin" value="0" onclick="displayResult2(this.value)" >
                         <label>Not Admin</label> <br>
                     </fieldset>
                 </c:if>
                 <c:if test="${userinfo.is_admin!=1}">
                     <fieldset>
-                        <input type="radio"  name="admin" value="1" onclick="displayResult(this.value)">
+                        <input type="radio"  name="admin" value="1" onclick="displayResult2(this.value)">
                         <label>Admin</label> <br>
-                        <input type="radio"  name="admin" value="0" checked="checked" onclick="displayResult(this.value) ">
+                        <input type="radio"  name="admin" value="0" checked="checked" onclick="displayResult2(this.value) ">
                         <label >Not Admin</label> <br>
                     </fieldset>
                 </c:if>
                 <div align="center">
                     <input type="submit" name=" " value="Submit">
-                    <input type="text" name="is_admin" id="is_admin2" style="display: none">
+                    <input type="text" name="is_admin" id="is_admin2" style="display: none" >
                 </div>
             </form>
 

@@ -48,7 +48,7 @@
         </div>
         <div class="iconlist">
             <div width="225px"><img src="" width="225px" height="225" id="1" alt="Select Book Picture"
-                                    style="border: 1.5px solid black"/></div>
+                                    style="border: 1.5px solid black ;"/></div>
         </div>
         </div>
 

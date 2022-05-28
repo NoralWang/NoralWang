@@ -122,7 +122,7 @@ body {
 }
 
 
-.movebd .box .inputBoxfile .iconlist	.img {
+.movebd .box .inputBoxfile .iconlist .img {
 	opacity: 0;
 }
 
@@ -146,13 +146,7 @@ body {
 	font-size:13px;
 	bottom: 0;
 }
-.box .create
-a:link, a:visited {
-	position: relative;
-	color: #80aaea;
-	font-size:13px;
-	text-align: right;
-	bottom: 0;
-}
+
+
 
 
