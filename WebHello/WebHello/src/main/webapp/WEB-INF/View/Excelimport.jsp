@@ -15,7 +15,6 @@
         </head>
     <body >
     <input type="file" id="excel-file" style="margin-left: 30%">
-    <p id="demo">单击按钮给数组添加新的元素。</p>
     <button onclick="myFunction()" style="margin-left: 30%">点我</button>
     <script>
         //给input标签绑定change事件，一上传选中的.xls文件就会触发该函数
@@ -46,7 +45,19 @@
                 }
                 //在控制台打印出来表格中的数据
                 console.log(persons);
-                persons= new ArrayList();
+
+                // document.getElementById("tablei").innerHTML = JSON.stringify(persons, null, 100);
+
+                for(i=0;i<persons.length;i++){
+                    document.getElementById("1").innerHTML = JSON.stringify(persons[i].ID);
+                    document.getElementById("2").innerHTML = JSON.stringify(persons[i].NAME);
+                    document.getElementById("3").innerHTML = JSON.stringify(persons[i].YEAR);
+                    document.getElementById("4").innerHTML = JSON.stringify(persons[i].AUTHOR);
+                    document.getElementById("5").innerHTML = JSON.stringify(persons[i].LOCATION);
+                    document.getElementById("6").innerHTML = JSON.stringify(persons[i].GEN);
+                    document.getElementById("7").innerHTML = JSON.stringify(persons[i].DELETE);
+                    document.getElementById("8").innerHTML = JSON.stringify(persons[i].PICTURE);
+                }
                    };
                    // 以二进制方式打开文件
                    fileReader.readAsBinaryString(files[0]);
@@ -54,7 +65,7 @@
 
 </script>
 
-    <table style="margin-left: 30%">
+    <table id="tablei" style="margin-left: 30%">
         <tr>
             <th>Book ID</th>
             <th>Name</th>
@@ -66,19 +77,22 @@
             <th>Genre ID</th>
         </tr>
 
-        <c:forEach items="${persons}" var="persons">
-            <tr>
-                <td> ${persons}</td>
-                <td> ${persons}</td>
-                <td> <img src=${books.picture} alt="Book" style="width: 100px;height: 120px;margin: 0px;padding: 0px"></td>
-                <td> $persons}</td>
-                <td>${persons}</td>
-                <td> ${persons}</td>
-                <td> ${persons}</td>
-                <td> ${persons}</td>
+       <tr>
+           <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+           <td id="4"></td>
+           <td id="5"></td>
+           <td id="6"></td>
+           <td id="7"></td>
+           <td id="8"></td>
+        </tr>
+        <tr>
 
-            </tr>
-        </c:forEach>
+        </tr>
+        <tr>
+
+        </tr>
 
         </div>
     </table>
